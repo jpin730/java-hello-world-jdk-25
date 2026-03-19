@@ -76,10 +76,14 @@ public class Main {
         personSet.add(person2);
         personSet.add(person3); // This will not be added because of the same ID
 
-        System.out.print("personSet = {");
-        for (Person person : personSet) {
-            System.out.print(" " + person.getName() + "(" + person.getId() + ") ");
-        }
-        System.out.print("}\n");
+        System.out.println("personSet = " + personSet);
+
+        personSet.remove(person1);
+
+        System.out.println("personSet = " + personSet);
+
+        personSet.add(person3);
+        
+        System.out.println("personSet = " + personSet);
     }
 }
