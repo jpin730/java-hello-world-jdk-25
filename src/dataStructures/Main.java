@@ -1,6 +1,7 @@
 package dataStructures;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 
 public class Main {
     static void main() {
@@ -48,5 +49,21 @@ public class Main {
         arrayList.add(30);
 
         System.out.println("Elements of arrayList: " + arrayList);
+
+        // Hashset
+        HashSet<Integer> hashSet = new HashSet<>();
+
+        hashSet.add(10);
+        hashSet.add(10); // repeated
+        hashSet.add(20);
+        hashSet.add(30);
+        hashSet.add(40);
+        hashSet.add(50);
+
+        System.out.println("hashSet = " + hashSet);
+
+        hashSet.remove(20);
+
+        System.out.println("hashSet after removing 20 = " + hashSet);
     }
 }
