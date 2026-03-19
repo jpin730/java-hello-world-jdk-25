@@ -124,5 +124,17 @@ public class Main {
         nameAgeTreeMap.put("Charlie", 36); // Update Charlie's age
 
         System.out.println("nameAgeTreeMap = " + nameAgeTreeMap);
+
+        // HashMap with Custom Classes
+        HashMap<String, Person> idPersonHashMap = new HashMap<>();
+
+        idPersonHashMap.put(person1.getId(), person1);
+        idPersonHashMap.put(person2.getId(), person2);
+
+        System.out.println("idPersonHashMap = " + idPersonHashMap);
+
+        idPersonHashMap.put(person3.getId(), person3); // This will overwrite person1 because of the same ID
+
+        System.out.println("idPersonHashMap = " + idPersonHashMap);
     }
 }
