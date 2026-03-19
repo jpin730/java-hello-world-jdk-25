@@ -65,5 +65,21 @@ public class Main {
         hashSet.remove(20);
 
         System.out.println("hashSet after removing 20 = " + hashSet);
+
+        // Hashset of Custom Classes
+        HashSet<Person> personSet = new HashSet<>();
+        Person person1 = new Person("Alice", "123");
+        Person person2 = new Person("Bob", "456");
+        Person person3 = new Person("Charlie", "123"); // Same ID as person1
+
+        personSet.add(person1);
+        personSet.add(person2);
+        personSet.add(person3); // This will not be added because of the same ID
+
+        System.out.print("personSet = {");
+        for (Person person : personSet) {
+            System.out.print(" " + person.getName() + "(" + person.getId() + ") ");
+        }
+        System.out.print("}\n");
     }
 }
