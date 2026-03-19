@@ -136,5 +136,24 @@ public class Main {
         idPersonHashMap.put(person3.getId(), person3); // This will overwrite person1 because of the same ID
 
         System.out.println("idPersonHashMap = " + idPersonHashMap);
+
+        // HashMap with Custom Class as Keys
+        TreeMap<Product, Double> priceMap = new TreeMap<>();
+
+        priceMap.put(new Product(1, "Laptop"), 999.99);
+        priceMap.put(new Product(2, "Smartphone"), 499.99);
+        priceMap.put(new Product(3, "Tablet"), 299.99);
+
+        System.out.println("priceMap = " + priceMap);
+
+        priceMap.remove(new Product(2, "Smartphone"));
+
+        System.out.println("priceMap = " + priceMap);
+
+        priceMap.put(new Product(2, "Smartphone"), 449.99);
+
+        System.out.println("priceMap = " + priceMap);
+
+        System.out.println("Laptop Price = " + priceMap.get(new Product(2, "Smartphone")));
     }
 }
