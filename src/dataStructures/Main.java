@@ -1,5 +1,7 @@
 package dataStructures;
 
+import java.util.ArrayList;
+
 public class Main {
     static void main() {
         // Static Arrays
@@ -37,5 +39,14 @@ public class Main {
             System.out.print(number + " ");
         }
         System.out.println();
+
+        // Dynamic Arrays
+        ArrayList<Integer> arrayList = new ArrayList<>();
+
+        arrayList.add(10);
+        arrayList.add(20);
+        arrayList.add(30);
+
+        System.out.println("Elements of arrayList: " + arrayList);
     }
 }
