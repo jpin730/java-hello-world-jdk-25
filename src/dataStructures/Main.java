@@ -155,5 +155,57 @@ public class Main {
         System.out.println("priceMap = " + priceMap);
 
         System.out.println("Laptop Price = " + priceMap.get(new Product(2, "Smartphone")));
+
+        // Iterators
+        ArrayList<String> nameList = new ArrayList<>(
+                Arrays.asList("Alice", "Bob", "Charlie", "David", "Axel", "Amanda")
+        );
+
+        System.out.println("nameList = " + nameList);
+
+        Iterator<String> nameIterator = nameList.iterator();
+
+        while (nameIterator.hasNext()) {
+            String name = nameIterator.next();
+            if (name.startsWith("A")) {
+                nameIterator.remove();
+            }
+        }
+
+        System.out.println("nameList = " + nameList);
+
+        // ListIterators
+        ListIterator<String> listIterator = nameList.listIterator();
+
+        while (listIterator.hasNext()) {
+            String name = listIterator.next();
+
+            // Add item
+            if (name.equals("Bob")) {
+                listIterator.add("Bob Jr.");
+            }
+
+            // Update item
+            if (name.equals("Charlie")) {
+                listIterator.set("Charlie Sr.");
+            }
+
+            // Remove item
+            if (name.equals("David")) {
+                listIterator.remove();
+            }
+        }
+
+        listIterator = nameList.listIterator();
+        // Print listIterator
+        System.out.print("nameList = [");
+        while (listIterator.hasNext()) {
+            System.out.print(listIterator.next());
+            if (listIterator.hasNext()) {
+                System.out.print(", ");
+            } else {
+                System.out.println("]");
+            }
+        }
     }
 }
