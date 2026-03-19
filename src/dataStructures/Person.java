@@ -2,7 +2,7 @@ package dataStructures;
 
 import java.util.Objects;
 
-public class Person {
+public class Person implements Comparable<Person> {
     private String name;
     private String id;
 
@@ -37,6 +37,11 @@ public class Person {
     @Override
     public int hashCode() {
         return Objects.hashCode(id);
+    }
+
+    @Override
+    public int compareTo(Person o) {
+        return this.id.compareTo(o.id);
     }
 
     @Override

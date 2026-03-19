@@ -2,6 +2,7 @@ package dataStructures;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.TreeSet;
 
 public class Main {
     static void main() {
@@ -83,7 +84,19 @@ public class Main {
         System.out.println("personSet = " + personSet);
 
         personSet.add(person3);
-        
+
         System.out.println("personSet = " + personSet);
+
+        // TreeSet
+        TreeSet<Person> personTreeSet = new TreeSet<>();
+
+        personTreeSet.add(person1);
+        personTreeSet.add(person2);
+        personTreeSet.add(person3); // This will not be added because of the same ID
+
+        Person person4 = new Person("David", "789");
+        personTreeSet.add(person4);
+
+        System.out.println("personTreeSet = " + personTreeSet);
     }
 }
