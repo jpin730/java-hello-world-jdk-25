@@ -1,8 +1,6 @@
 package dataStructures;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Main {
     static void main() {
@@ -98,5 +96,33 @@ public class Main {
         personTreeSet.add(person4);
 
         System.out.println("personTreeSet = " + personTreeSet);
+
+        // HashMap
+        HashMap<String, Integer> nameAgeHashMap = new HashMap<>();
+
+        nameAgeHashMap.put("Alice", 30);
+        nameAgeHashMap.put("Bob", 25);
+        nameAgeHashMap.put("Charlie", 35);
+
+        System.out.println("nameAgeHashMap = " + nameAgeHashMap);
+
+        System.out.println("Alice's age: " + nameAgeHashMap.get("Alice"));
+
+        nameAgeHashMap.put("Alice", 31); // Update Alice's age
+
+        System.out.println("nameAgeHashMap = " + nameAgeHashMap);
+
+        nameAgeHashMap.remove("Bob");
+
+        System.out.println("nameAgeHashMap = " + nameAgeHashMap);
+
+        // TreeMap
+        TreeMap<String, Integer> nameAgeTreeMap = new TreeMap<>(nameAgeHashMap);
+
+        nameAgeTreeMap.put("David", 28);
+        nameAgeTreeMap.put("Eve", 22);
+        nameAgeTreeMap.put("Charlie", 36); // Update Charlie's age
+
+        System.out.println("nameAgeTreeMap = " + nameAgeTreeMap);
     }
 }
