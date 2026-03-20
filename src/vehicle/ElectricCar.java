@@ -14,15 +14,15 @@ public class ElectricCar extends Car implements Electric {
     }
 
     @Override
-    public void chargeBattery() {
-        batteryLevel = 100;
-        System.out.println("Battery fully charged");
-    }
-
-    @Override
     public String toString() {
         return super.toString() + ", ElectricCar{" +
                 "batteryLevel=" + batteryLevel +
                 '}';
+    }
+
+    @Override
+    public void chargeBattery() {
+        batteryLevel = 100;
+        System.out.println("Battery fully charged");
     }
 }

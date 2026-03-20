@@ -13,18 +13,18 @@ public class Car extends Vehicle {
         System.out.println("Car started");
     }
 
+    @Override
+    public String toString() {
+        return super.toString() + ", Car{" +
+                "type=" + type +
+                '}';
+    }
+
     public CarType getType() {
         return type;
     }
 
     public void setType(CarType type) {
         this.type = type;
-    }
-
-    @Override
-    public String toString() {
-        return super.toString() + ", Car{" +
-                "type=" + type +
-                '}';
     }
 }
